@@ -1,0 +1,55 @@
+.light {
+  --bgGrayTransparent: rgba(39, 49, 51, 0.57);
+  --bgWhiteAlpha: rgba(255, 255, 255, 0.5);
+  --content-1: #1c1c1c;
+  --content-2: #585757;
+  --content-3: #969696;
+  --border: #e8e8e8;
+  --background-secondary: #f7f7f7;
+  --background-primary: #fff;
+  --blue-base: #0085ff;
+  --blue-hover: #339dff;
+  --blue-active: #1272cc;
+  --blue-border: #cce7ff;
+  --blue-background: #e5f3ff;
+  --green-base: #00ba34;
+  --green-hover: #33c85d;
+  --green-active: #00952a;
+  --green-border: #ccf1d6;
+  --green-background: #e5f8eb;
+  --orange-base: #f98600;
+  --orange-background: #fff5e8;
+  --orange-border: #fee7cc;
+  --red-base: #e92c2c;
+  --red-hover: #e65050;
+  --red-background: #ffebeb;
+  --red-border: #fbd5d5;
+}
+
+.dark {
+  --bgGrayTransparent: rgba(150, 150, 150, 0.57);
+  --bgWhiteAlpha: rgba(0, 0, 0, 0.5);
+  --content-1: #e8e8e8;
+  --content-2: #bababa;
+  --content-3: #767676;
+  --border: #313131;
+  --background-secondary: #272727;
+  --background-primary: #1a1a1a;
+  --blue-base: #168fff;
+  --blue-hover: #45a5ff;
+  --blue-active: #1272cc;
+  --blue-border: #193148;
+  --blue-background: #1a2631;
+  --green-base: #17cb49;
+  --green-hover: #45d56d;
+  --green-active: #12a23a;
+  --green-border: #193d23;
+  --green-background: #1a2c1f;
+  --orange-base: #ff9f2d;
+  --orange-background: #31271c;
+  --orange-border: #48351e;
+  --red-base: #f74141;
+  --red-hover: #ff4242;
+  --red-background: #301e1e;
+  --red-border: #462222;
+}

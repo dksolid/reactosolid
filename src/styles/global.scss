@@ -1,0 +1,42 @@
+@use "animations";
+@use "reset";
+@use "mixins";
+
+html,
+body {
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: var(--content-1);
+}
+
+#app {
+  min-height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+}
+
+body {
+  font-family: "Inter", Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  color: var(--content-1);
+  overflow-x: hidden;
+}
+
+* {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--content-1);
+}

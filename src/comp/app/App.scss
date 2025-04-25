@@ -1,0 +1,10 @@
+@import "mixins.scss";
+
+.content {
+  background-color: var(--background-secondary);
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  min-width: 100px;
+}

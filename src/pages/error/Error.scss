@@ -1,0 +1,17 @@
+@import "mixins.scss";
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.title {
+  @include body18Bold;
+  padding-bottom: 12px;
+}
+
+.subtitle {
+  @include body16Regular;
+}

@@ -1,0 +1,21 @@
+@import "mixins.scss";
+
+.header {
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.menu {
+  padding-left: 24px;
+  align-self: stretch;
+}
+
+.headerRight {
+  display: flex;
+  padding-right: 24px;
+}

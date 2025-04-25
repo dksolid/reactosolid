@@ -1,0 +1,28 @@
+@import "mixins.scss";
+
+.bodyOverflowHidden {
+  overflow: hidden;
+}
+
+.spinner {
+  @include spinner;
+}
+
+.backdrop {
+  @include modal-backdrop;
+
+  .modalWrapper {
+    @include modal-wrapper;
+
+    &.isShaking {
+      :global {
+        animation-name: shake;
+      }
+    }
+
+    &.contentFullHeight {
+      align-items: stretch;
+      max-height: 100%;
+    }
+  }
+}

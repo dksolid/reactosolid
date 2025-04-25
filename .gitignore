@@ -1,0 +1,27 @@
+*.DS_Store
+*.log
+.env
+.idea
+.vscode
+node_modules
+build
+tests/cypress/videos
+tests/cypress/screenshots
+tests/report.xml
+tmp
+.swc
+/stats
+
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store
+

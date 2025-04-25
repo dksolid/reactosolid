@@ -1,0 +1,67 @@
+@import "mixins.scss";
+
+.bodyOverflowHidden {
+  overflow: hidden;
+}
+
+.backdrop {
+  @include modal-backdrop;
+
+  :global(.mobile) & {
+    background: var(--bgGrayTransparent);
+  }
+
+  .modalWrapper {
+    @include confirm-wrapper;
+
+    .modalContent {
+      @include confirm;
+      max-width: 400px;
+      padding: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.imageWrapper {
+  padding-bottom: 20px;
+}
+
+.svgWrapper {
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.title {
+  @include body18Bold;
+}
+
+.text {
+  @include body16Regular;
+  padding-top: 4px;
+}
+
+.buttonsBlock {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin: 0 -6px;
+
+  .button {
+    flex-grow: 1;
+    margin: 0 6px;
+  }
+
+  &.buttonsInColumn {
+    flex-flow: column nowrap;
+
+    .button + .button {
+      margin-top: 20px;
+    }
+  }
+}

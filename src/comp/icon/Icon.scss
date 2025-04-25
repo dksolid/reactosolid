@@ -1,0 +1,13 @@
+@import "mixins.scss";
+
+.icon {
+  @include inline-top;
+  user-select: none;
+  line-height: 1em;
+
+  svg {
+    @include inline-top;
+    width: 1em;
+    height: 1em;
+  }
+}

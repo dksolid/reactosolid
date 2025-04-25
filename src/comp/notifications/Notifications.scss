@@ -1,0 +1,91 @@
+@import "mixins.scss";
+
+.notifications {
+  position: fixed;
+  top: 10px;
+  left: 16px;
+  right: 16px;
+
+  :global(.mobile) & {
+    top: 16px;
+  }
+}
+
+.notification {
+  opacity: 0;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 340px;
+  padding-bottom: 8px;
+
+  :global(.mobile) & {
+    width: 100%;
+  }
+
+  .notificationInner {
+    padding: 12px;
+    border-radius: 16px;
+    background: var(--background-primary);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    word-break: break-word;
+
+    .icon {
+      font-size: 24px;
+      margin-right: 18px;
+    }
+
+    .message {
+      @include caption14Regular;
+      flex-grow: 1;
+      min-height: 24px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    .close {
+      font-size: 24px;
+      color: var(--content-2);
+      transition: color 0.2s;
+      cursor: pointer;
+      margin-left: 18px;
+
+      &:hover {
+        color: var(--content-1);
+      }
+    }
+  }
+
+  &.success {
+    color: var(--green-base);
+
+    .notificationInner {
+      background: var(--green-background);
+      border: 1px solid var(--green-border);
+    }
+  }
+
+  &.error {
+    color: var(--red-base);
+
+    .notificationInner {
+      background: var(--red-background);
+      border: 1px solid var(--red-border);
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.leaving {
+    opacity: 0;
+  }
+}

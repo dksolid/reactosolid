@@ -1,0 +1,108 @@
+@import "mixins.scss";
+
+.navList {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+
+  .navLink {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: color 0.2s ease;
+    position: relative;
+    color: var(--content-2);
+    text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--blue-base) !important;
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: var(--blue-base) !important;
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &:after {
+      content: "";
+      bottom: -1px;
+      width: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      position: absolute;
+      transition: all 0.2s ease;
+      background-color: var(--blue-base);
+    }
+  }
+
+  &.vertical {
+    flex-flow: column nowrap;
+
+    .navLink {
+      padding: 10px 20px;
+      margin-right: 0 !important;
+
+      &:after {
+        bottom: 0;
+        top: 50%;
+        right: auto;
+        width: 3px;
+        height: 0 !important;
+        transform: translate(0, -50%);
+      }
+
+      &:hover,
+      &.active {
+        &:after {
+          height: 100% !important;
+          width: 3px;
+        }
+      }
+    }
+  }
+
+  &.big {
+    .navLink {
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:after {
+        height: 4px;
+      }
+    }
+  }
+
+  &.small {
+    font-weight: 500;
+
+    .navLink {
+      padding: 0;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:after {
+        height: 2px;
+      }
+    }
+  }
+}
